@@ -480,6 +480,8 @@ const MainLayout = () => {
             <div key={cardKey}>
               <Card style={{ position: "relative", zIndex: 9999 }}>
                 <Button
+                  className="no-drag"
+
                   onClick={() => handleDeleteCard(cardKey)}
                   size="small"
                   style={{
@@ -595,6 +597,8 @@ const MainLayout = () => {
         <div key={cardKey}>
           <Card style={{ position: "relative", zIndex: 9999 }}>
             <Button
+              className="no-drag"
+
               onClick={() => handleDeleteCard(cardKey)}
               size="small"
               style={{
@@ -754,6 +758,8 @@ const MainLayout = () => {
                 width={containerWidth}
                 isResizable
                 resizeHandles={["se"]}
+                draggableCancel=".no-drag"   // ✅ prevent drag from delete button area
+
               >
                 {chartCards}
               </GridLayout>
